@@ -81,7 +81,7 @@ function Calcul() {
   }
 
   perimeter.value = answer_radius.value * 2 * Math.PI;
-  answer_area.value = answer_radius.value * answer_radius.value * Math.PI;
+  answer_area.value = (answer_radius.value * answer_radius.value) * Math.PI;
   answer_volume.value = (4 / 3) * Math.PI * Math.pow(answer_radius.value, 3);
 }
 </script>
