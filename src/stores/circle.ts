@@ -8,6 +8,5 @@ export const useCircleStore = defineStore({
   getters: {
     getRadius: (state) => state.radius,
   },
-  actions: {
-  },
+  actions: {},
 });

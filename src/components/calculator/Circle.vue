@@ -38,7 +38,7 @@
 
 <script setup>
 import { ref } from "vue";
-import { useCircleStore } from "../stores/circle";
+import { useCircleStore } from "../../stores/circle";
 
 const storeStore = useCircleStore();
 
@@ -51,18 +51,18 @@ let error_field = ref("");
 answer_radius.value = storeStore.getRadius;
 
 function HandleInput() {
-  console.log("HandleInput");
+  // console.log("HandleInput");
   answer_radius.value++;
   answer_area.value++;
   answer_volume.value++;
-  console.log(answer_radius.value);
-  console.log(answer_area.value);
-  console.log(answer_volume.value);
+  // console.log(answer_radius.value);
+  // console.log(answer_area.value);
+  // console.log(answer_volume.value);
 }
 
 function Calcul() {
-  console.log("Calcul");
-  console.log("Radius : " + answer_radius.value);
+  // console.log("Calcul");
+  // console.log("Radius : " + answer_radius.value);
 
   error_field.value = "";
 
@@ -81,12 +81,12 @@ function Calcul() {
   }
 
   perimeter.value = answer_radius.value * 2 * Math.PI;
-  answer_area.value = (answer_radius.value * answer_radius.value) * Math.PI;
+  answer_area.value = answer_radius.value * answer_radius.value * Math.PI;
   answer_volume.value = (4 / 3) * Math.PI * Math.pow(answer_radius.value, 3);
 }
 </script>
 
-<style >
+<style>
 .da_body {
   display: flex;
   flex-direction: column;
