@@ -71,6 +71,8 @@ function Calcul() {
     return;
   }
 
+  //Abs nous donne une valeur positive
+  // Floor nous arrondie au plus bas
   answer_radius.value = Math.floor(Math.abs(answer_radius.value));
 
   if (!Number.isInteger(answer_radius.value)) {
